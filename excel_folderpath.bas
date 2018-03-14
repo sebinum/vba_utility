@@ -1,8 +1,9 @@
 Option Explicit
 
 Function get_folder_path() As String
-'Date:          2018-03-09
-'Summary:       opens filedialog and allows
+'Date:          2018-03-14
+'Summary:       opens filedialog and allows selection of a folder, 
+'               the folders full path is returned as a string
 'Credit:        derek from https://stackoverflow.com/a/23354219 (accessed 2018-03-05)
 '               chris neilsen from https://stackoverflow.com/a/5975453 (accessed 2018-03-05)
 
@@ -21,7 +22,6 @@ With diaFolder
     .AllowMultiSelect = False
     .Title = "Select a folder"
     .Show
-    'Range("IC_Files_Path").Value2 = .SelectedItems(1)
 End With
 
 'Full path of folder as string
@@ -32,6 +32,8 @@ If Right(resStr, 1) <> "\" Then resStr = resStr & "\"
 
 'Return folderpath
 get_folder_path = resStr
+
+'Clean up
 Set diaFolder = Nothing
 
 Exit Function
@@ -61,6 +63,6 @@ Set ws = wb.Sheets("Table1")
 path = get_folder_path()
 
 'Update path if selection was made
-If path <> "" Then Range("B2").Value2 = get_folder_path()
+If path <> "" Then Range("B2").Value2 = path
 
 End Sub
