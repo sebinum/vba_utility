@@ -83,8 +83,8 @@ Do While Len(fCSV) > 0
         'Get first empty row from column A in destination sheet (MAY NEED ADJUSTING)
         lrMST = wsMST.Cells(wsMST.Rows.Count, "A").End(xlUp).Row + 1
         
-        'Get first empty row from column A in csv-source sheet (MAY NEED ADJUSTING)
-        lrCSV = wsCSV.Cells(wsCSV.Rows.Count, "A").End(xlUp).Row + 1
+        'Get last row from column A in csv-source sheet (MAY NEED ADJUSTING)
+        lrCSV = wsCSV.Cells(wsCSV.Rows.Count, "A").End(xlUp).Row
         
         '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         'Code to copy relevant data to destination sheet goes below here.
