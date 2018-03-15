@@ -83,8 +83,8 @@ Do While Len(fCSV) > 0
         'Get first empty row from column A in destination sheet (MAY NEED ADJUSTING)
         lrMST = wsMST.Cells(wsMST.Rows.Count, "A").End(xlUp).Row + 1
         
-        'Get last populated row from column A in csv-source sheet (MAY NEED ADJUSTING)
-        lrCSV = wsCSV.Cells(wsCSV.Rows.Count, "A").End(xlUp).Row
+        'Get first empty row from column A in csv-source sheet (MAY NEED ADJUSTING)
+        lrCSV = wsCSV.Cells(wsCSV.Rows.Count, "A").End(xlUp).Row + 1
         
         '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         'Code to copy relevant data to destination sheet goes below here.
@@ -93,8 +93,8 @@ Do While Len(fCSV) > 0
         
         ' copy columns B, and F to wsMST
         With wsMST
-            .Range("A" & lrMST, "A" & (lrMST + lrCSV - 1)).Value2 = wsCSV.Range("B2:B" & lrCSV).Value2
-            .Range("B" & lrMST, "B" & (lrMST + lrCSV - 1)).Value2 = wsCSV.Range("F2:F" & lrCSV).Value2
+            .Range("A" & lrMST, "A" & (lrMST + lrCSV - 2)).Value2 = wsCSV.Range("B2:B" & lrCSV).Value2
+            .Range("B" & lrMST, "B" & (lrMST + lrCSV - 2)).Value2 = wsCSV.Range("F2:F" & lrCSV).Value2
         End With
 
         '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
