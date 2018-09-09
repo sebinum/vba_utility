@@ -172,6 +172,7 @@ With Application
     .ScreenUpdating = False
     .Calculation = xlCalculationManual
     .DisplayAlerts = False
+    .AskToUpdateLinks = False
 End With
 
 'Declare Sheets
@@ -281,6 +282,7 @@ With Application
     .ScreenUpdating = True
     .Calculation = xlCalculationAutomatic
     .DisplayAlerts = True
+    .AskToUpdateLinks = True
 End With
 
 'Status report
