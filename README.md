@@ -1,6 +1,7 @@
 # vba_utility
 Some VBA utility functions / subs for Excel and Access.
 
+
 # Setting up Visual Basic for Applications (VBA)
 VBA is a fairly old application and not up to date with modern IDE standards. There are some ways to adapt VBA by changing some setting or even adding add-ins.
 
@@ -30,3 +31,21 @@ Ruberduck is an add-in that adds a wide set of feature to VBA (such as auto-inde
 Website: http://rubberduckvba.com/
 
 Github: https://github.com/rubberduck-vba/Rubberduck/releases
+
+# Coding Style Guideline applied in this project
+
+Paul Kelly from [excelmacromastery.com](https://excelmacromastery.com/vba-dim/) gives a great overview on variable types and their initilization.
+
+## Types and their declaration 
+
+
+|Variable Type | Abbbreviation  | Example                       | Description      |
+|--------------|----------------|-------------------------------|------------------|
+| `String`     | str            | `Dim str_name as String`      | Basic            |
+| `Long`       | lng            | `Dim lng_counter as Long`     | Basic            |
+| `Double`     | dbl            | `Dim dbl_variance as Double`  | Basic            |
+| `Currency`   | ccy            | `Dim ccy_cost as Currency`    | Basic            |
+| `Boolean`    | bln            | `Dim bln_status as Boolean`   | Basic            |
+| `Variant`    | var            | `Dim var_list as Variant`     | Variant / Array  |
+
+There is no  reason to use `Integer` over `Long` due to it's limitations, as described by [RubberDuck on Stackoverflow](https://stackoverflow.com/a/26409520).
