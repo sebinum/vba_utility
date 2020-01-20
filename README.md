@@ -32,11 +32,11 @@ Website: http://rubberduckvba.com/
 
 Github: https://github.com/rubberduck-vba/Rubberduck/releases
 
-# Coding Style Guideline applied
+# Coding Style Guideline applied in this project
 
 Paul Kelly from [excelmacromastery.com](https://excelmacromastery.com/vba-dim/) gives a great overview on variable types and their initilization.
 
-## 
+## Types and their declaration 
 
 
 |Variable Type | Abbbreviation  | Example                       | Description      |
@@ -48,15 +48,4 @@ Paul Kelly from [excelmacromastery.com](https://excelmacromastery.com/vba-dim/) 
 | `Boolean`    | bln            | `Dim bln_status as Boolean`   | Basic            |
 | `Variant`    | var            | `Dim var_list as Variant`     | Variant / Array  |
 
-## Basic variables
-
-```
-**Dim** [variable name] as [Type]
-```
-```
-'variable of type long (always use instead of integer), e.g. 1
-Dim lng_count as Long
-
-
-```
-
+There is no  reason to use `Integer` over `Long` due to it's limitations, as described by [RubberDuck on Stackoverflow](https://stackoverflow.com/a/26409520).
