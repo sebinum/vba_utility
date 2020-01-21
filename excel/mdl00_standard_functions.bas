@@ -16,7 +16,7 @@ Option Explicit
 '2020-01-09 written
 '===============================================================================
 Function last_row(wks_worksheet_name As Worksheet, _
-                  Optional var_column_index As Variant = 1)
+                  Optional var_column_index As Variant = 1) As Long
     
     With wks_worksheet_name
         last_row = .Cells(.Rows.Count, var_column_index).End(xlUp).Row
@@ -39,7 +39,7 @@ End Function
 '2020-01-09 written
 '===============================================================================
 Function last_column(wks_worksheet_name As Worksheet, _
-                     Optional lng_row_index As Long = 1)
+                     Optional lng_row_index As Long = 1) As Variant
     
     With wks_worksheet_name
         last_column = .Cells(lng_row_index, .Columns.Count).End(xlToLeft).Column
